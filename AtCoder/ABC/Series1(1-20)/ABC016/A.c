@@ -17,14 +17,12 @@
 typedef long long ll;
 
 signed main(void){
-    char S[256],S2[256];
-    scanf("%s %s",S,S2);
-    int len1=strlen(S);
-    int len2=strlen(S2);
-    if(len1<len2){
-        printf("%s\n",S2);
+    int M,D;
+    scanf("%d %d",&M,&D);
+    if(M%D==0){
+        puts("YES");
     }else{
-       printf("%s\n",S); 
+        puts("NO");
     }
     return 0;
 }
