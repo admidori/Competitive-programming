@@ -34,18 +34,15 @@ char *string_scan(char *S){
 }
 
 signed main(void){
-    int V,T,S,D;
-    scanf("%d %d %d %d",&V,&T,&S,&D);
-    if(V*T>D){
-        puts("Yes");
-        return 0;
+    int X;
+    scanf("%d",&X);
+    if(X<1200){
+        puts("ABC");
     }
-    rep2(i,T,S+1){
-        if(V*i>=D){
-            puts("No");
-            return 0;
-        }
+    else if(X<2800){
+        puts("ARC");
+    }else{
+        puts("AGC");
     }
-    puts("Yes");
     return 0;
 }

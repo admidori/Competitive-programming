@@ -34,18 +34,15 @@ char *string_scan(char *S){
 }
 
 signed main(void){
-    int V,T,S,D;
-    scanf("%d %d %d %d",&V,&T,&S,&D);
-    if(V*T>D){
-        puts("Yes");
-        return 0;
-    }
-    rep2(i,T,S+1){
-        if(V*i>=D){
-            puts("No");
-            return 0;
+    int N;
+    scanf("%d",&N);
+    int x=0,y=0;
+    rep(i,N){
+        x+=800;
+        if((i+1)%15==0){
+            y+=200;
         }
     }
-    puts("Yes");
+    printf("%d\n",x-y);
     return 0;
 }
