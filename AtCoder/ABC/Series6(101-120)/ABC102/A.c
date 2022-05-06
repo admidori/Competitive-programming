@@ -23,5 +23,5 @@ signed main(void){
     if(N%2==0)  printf("%d",N);
     else    printf("%d",N*2);
     puts("");
-    return 0;
+    return 0; 
 }
