@@ -38,8 +38,18 @@ void Bubble_sort(int N,int *array){
     } 
 }
 
+/*
+    Insertion Sort
+    O(n^2)
+    Stable
+*/
 void Insertion_sort(int N,int *array){
-
+    int i,j;
+    for(i=1;i<N;i++){
+        for(j=0;j<i;j++){
+            if(array[i]<array[j])   swap(&array[i],&array[j]);
+        }
+    }
 }
 
 /*
@@ -53,7 +63,8 @@ void Quick_sort(int N,int *array){
 int main(void){
     int array[]={3,26,4,1,5};
     //Bubble_sort(5,array);
-    Sellection_sort(5,array);
+    //Sellection_sort(5,array);
+    Insertion_sort(5,array);
     for(int i=0;i<5;i++){
         printf("%d ",array[i]);
     }
