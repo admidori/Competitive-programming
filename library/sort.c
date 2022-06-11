@@ -10,9 +10,18 @@ void swap(int *a,int *b){
 /*
     Sellection Sort
     O(N^2)
+    Unstable
 */
 void Sellection_sort(int N,int *array){
-    
+    int i,j;
+    int min,minkey;
+    for(i=0;i<N-1;i++){
+        minkey=i;
+        min=array[i];
+        for(j=i+1;j<N;j++){
+            if(min>array[j])    swap(&array[j],&array[minkey]);
+        }
+    }
 }
 
 /*
@@ -42,8 +51,9 @@ void Quick_sort(int N,int *array){
 }
 
 int main(void){
-    int array[]={4,8,11,3,2};
-    Bubble_sort(5,array);
+    int array[]={3,26,4,1,5};
+    //Bubble_sort(5,array);
+    Sellection_sort(5,array);
     for(int i=0;i<5;i++){
         printf("%d ",array[i]);
     }
