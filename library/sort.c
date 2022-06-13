@@ -43,11 +43,23 @@ void Bubble_sort(int N,int *array){
     O(n^2)
     Stable
 */
-void Insertion_sort(int N,int *array){
+/* void Insertion_sort(int N,int *array){
     int i,j;
     for(i=1;i<N;i++){
         for(j=0;j<i;j++){
             if(array[i]<array[j])   swap(&array[i],&array[j]);
+        }
+    }
+}
+*/
+
+void Insertion_sort(int  N,int *array){
+    int i,j;
+    for(i=1;i<N;i++){
+        j=i;
+        while(j>0&&array[j]<array[j-1]){
+            swap(&array[j],&array[j-1]);
+            j--;
         }
     }
 }
